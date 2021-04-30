@@ -134,23 +134,22 @@ function add_dashboard_widgets() {
     );
 
 
-    // Force Widgets To The Top
-    // Globalize the metaboxes array, this holds all the widgets for wp-admin.
-    global $wp_meta_boxes;
+    // // Force Widgets To The Top
+    // // Globalize the metaboxes array, this holds all the widgets for wp-admin.
+    // global $wp_meta_boxes;
      
-    // Get the regular dashboard widgets array 
-    // (which already has our new widget but appended at the end).
-    $default_dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
-     
-    // Backup and delete our new dashboard widget from the end of the array.
-    $widget_backup = array( 'cybershop_dashboard_widget' => $default_dashboard['cybershop_dashboard_widget'] );
-    unset( $default_dashboard['cybershop_dashboard_widget'] );
+    // // Get the regular dashboard widgets array 
+    // // (which already has our new widget but appended at the end).
+    // $default_dashboard = $wp_meta_boxes['dashboard']['normal']['core'];
+    // // Backup and delete our new dashboard widget from the end of the array.
+    // $widget_backup = array( 'cybershop_dashboard_widget' => $default_dashboard['cybershop_dashboard_widget'] );
+    // unset( $default_dashboard['cybershop_dashboard_widget'] );
     
-    // Merge the two arrays together so our widget is at the beginning.
-    $sorted_dashboard = array_merge( $widget_backup, $default_dashboard );
+    // // Merge the two arrays together so our widget is at the beginning.
+    // $sorted_dashboard = array_merge( $widget_backup, $default_dashboard );
     
-    // Save the sorted array back into the original metaboxes. 
-    $wp_meta_boxes['dashboard']['normal']['core'] = $sorted_dashboard;
+    // // Save the sorted array back into the original metaboxes. 
+    // $wp_meta_boxes['dashboard']['normal']['core'] = $sorted_dashboard;
 }
 
 function cybershop_dashboard_widget_render() {

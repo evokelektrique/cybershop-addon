@@ -18,7 +18,8 @@ function carbon_theme_options() {
 	// Navbar fields
 	Container::make( 'nav_menu_item', __( 'Menu Settings', 'cybershop-addon' ) )
     ->add_fields( array(
-        Field::make( 'color', 'cybershop_nav_color', __( 'Color' ) ),
-        Field::make( 'icon', 'cybershop_nav_icon', __( 'Icon' ) ),
+        Field::make( 'color', 'cybershop_nav_color', __( 'رنگ' ) ),
+        Field::make( 'icon', 'cybershop_nav_icon', __( 'آیکون' ) ),
+        Field::make( 'image', 'cybershop_nav_image', __( 'عکس' ) )->set_value_type( 'url' ),
     ));
 }

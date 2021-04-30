@@ -47,8 +47,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ متن', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}}, {{WRAPPER}} a, {{WRAPPER}} .reply-title, {{WRAPPER}} a:hover' => 'color: {{VALUE}};',
@@ -95,8 +95,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ حاشیه', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .comment' => 'border-color: {{VALUE}};',
@@ -111,8 +111,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ حاشیه (هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .comment:hover' => 'border-color: {{VALUE}};',
@@ -161,7 +161,7 @@ class CybershopSinglePostComments extends Widget_Base {
 			[
 				'name' => 'navigation_typography',
 				'label' => __( 'تایپوگرافی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} #comments .nav-links .nav-next a, #comments .nav-links .nav-previous a',
 			]
 		);
@@ -195,8 +195,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ متن', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} #comments .nav-links .nav-next a, #comments .nav-links .nav-previous a' => 'color: {{VALUE}};',
@@ -242,7 +242,7 @@ class CybershopSinglePostComments extends Widget_Base {
 			[
 				'name' => 'comment_date_typography',
 				'label' => __( 'تایپوگرافی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} a.comment-date',
 			]
 		);
@@ -276,8 +276,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ متن', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} a.comment-date' => 'color: {{VALUE}};',
@@ -324,7 +324,7 @@ class CybershopSinglePostComments extends Widget_Base {
 			[
 				'name' => 'comment_author_typography',
 				'label' => __( 'تایپوگرافی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .comment-author, .comment-author *',
 			]
 		);
@@ -336,8 +336,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ متن', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .comment-author, .comment-author *' => 'color: {{VALUE}};',
@@ -384,7 +384,7 @@ class CybershopSinglePostComments extends Widget_Base {
 			[
 				'name' => 'comment_content_typography',
 				'label' => __( 'تایپوگرافی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .comment-content',
 			]
 		);
@@ -396,8 +396,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ متن', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .comment-content' => 'color: {{VALUE}};',
@@ -445,7 +445,7 @@ class CybershopSinglePostComments extends Widget_Base {
 			[
 				'name' => 'comment_reply_typography',
 				'label' => __( 'تایپوگرافی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .reply a',
 			]
 		);
@@ -457,8 +457,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ متن', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .reply a' => 'color: {{VALUE}};',
@@ -473,8 +473,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ متن (هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .reply a:hover' => 'color: {{VALUE}};',
@@ -522,8 +522,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ حاشیه', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .reply a' => 'border-color: {{VALUE}};',
@@ -538,8 +538,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ حاشیه (هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .reply a:hover' => 'border-color: {{VALUE}};',
@@ -588,7 +588,7 @@ class CybershopSinglePostComments extends Widget_Base {
 			[
 				'name' => 'inputs_typography',
 				'label' => __( 'تایپوگرافی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} input:not(.button):not(.checkbox), {{WRAPPER}} textarea',
 			]
 		);
@@ -600,8 +600,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ متن', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} input:not(.button):not(.checkbox), {{WRAPPER}} textarea, {{WRAPPER}} input:not(.button):not(.checkbox)::placeholder, {{WRAPPER}} textarea::placeholder' => 'color: {{VALUE}};',
@@ -616,8 +616,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ متن (هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} input:not(.button):not(.checkbox):hover, {{WRAPPER}} input:not(.button):not(.checkbox):focus, {{WRAPPER}} textarea:hover, {{WRAPPER}} textarea:focus' => 'color: {{VALUE}};',
@@ -673,8 +673,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ حاشیه', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} input:not(.button):not(.checkbox), {{WRAPPER}} textarea' => 'border-color: {{VALUE}};',
@@ -689,8 +689,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ حاشیه (هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} input:not(.button):not(.checkbox):hover, {{WRAPPER}} input:not(.button):not(.checkbox):focus, {{WRAPPER}} textarea:hover, {{WRAPPER}} textarea:focus' => 'border-color: {{VALUE}};',
@@ -754,7 +754,7 @@ class CybershopSinglePostComments extends Widget_Base {
 			[
 				'name' => 'send_button_typography',
 				'label' => __( 'تایپوگرافی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} input.button',
 			]
 		);
@@ -766,8 +766,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ متن', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} input.button' => 'color: {{VALUE}};',
@@ -782,8 +782,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ متن (هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} input.button:hover, {{WRAPPER}} input.button:focus' => 'color: {{VALUE}};',
@@ -852,8 +852,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ حاشیه', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} input.button' => 'border-color: {{VALUE}};',
@@ -868,8 +868,8 @@ class CybershopSinglePostComments extends Widget_Base {
 				'label' => __( 'رنگ حاشیه (هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} input.button:hover, {{WRAPPER}} input.button:focus' => 'border-color: {{VALUE}};',

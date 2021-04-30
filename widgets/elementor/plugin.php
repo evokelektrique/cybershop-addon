@@ -49,9 +49,12 @@ class Plugin {
 
 		// Global
 		require_once( __DIR__ . '/widgets/menu.php' );
-		require_once( __DIR__ . '/widgets/mega_menu.php' );
+		require_once( __DIR__ . '/widgets/mega_menu_1.php' );
+		require_once( __DIR__ . '/widgets/mobile_menu_1.php' );
 		require_once( __DIR__ . '/widgets/search.php' );
 		require_once( __DIR__ . '/widgets/cart.php' );
+		require_once( __DIR__ . '/widgets/woocommerce-myaccount-content.php' );
+		require_once( __DIR__ . '/widgets/woocommerce-myaccount-navigation.php' );
 
 		// Archive
 		require_once( __DIR__ . '/widgets/archive-posts.php' );
@@ -73,8 +76,11 @@ class Plugin {
 		require_once( __DIR__ . '/widgets/product-additional-information.php' );
 		require_once( __DIR__ . '/widgets/product-add-to-cart.php' );
 		require_once( __DIR__ . '/widgets/product-data-tabs.php' );
+		require_once( __DIR__ . '/widgets/product-related.php' );
 
-		
+		// Checkout
+		require_once( __DIR__ . '/widgets/checkout-order-table.php' );
+
 	}
 
 	/**
@@ -98,10 +104,15 @@ class Plugin {
 			->widgets_manager
 			->register_widget_type(new Widgets\CybershopMenu());
 
-		// Mega Menu Widget
+		// Mega Menu 1 Widget
 		\Elementor\Plugin::instance()
 			->widgets_manager
-			->register_widget_type(new Widgets\CybershopMegaMenu());
+			->register_widget_type(new Widgets\CybershopMegaMenu1());
+			
+		// Mobile Menu 1 Widget
+		\Elementor\Plugin::instance()
+			->widgets_manager
+			->register_widget_type(new Widgets\CybershopMobileMenu1());
 			
 		// Search Widget
 		\Elementor\Plugin::instance()
@@ -113,6 +124,21 @@ class Plugin {
 			->widgets_manager
 			->register_widget_type(new Widgets\CybershopCart());
 			
+
+
+		// Myaccount Content Widget
+		\Elementor\Plugin::instance()
+			->widgets_manager
+			->register_widget_type(new Widgets\CybershopWoocommerceMyaccountContent());
+			
+		// Myaccount Navigation Widget
+		\Elementor\Plugin::instance()
+			->widgets_manager
+			->register_widget_type(new Widgets\CybershopWoocommerceMyaccountNavigation());
+			
+
+
+
 		// Archive Posts Widget
 		\Elementor\Plugin::instance()
 			->widgets_manager
@@ -171,6 +197,14 @@ class Plugin {
 			->widgets_manager
 			->register_widget_type(new Widgets\CybershopProductDataTabs());
 
+		\Elementor\Plugin::instance()
+			->widgets_manager
+			->register_widget_type(new Widgets\CybershopProductRelated());
+
+		// Checkout
+		\Elementor\Plugin::instance()
+			->widgets_manager
+			->register_widget_type(new Widgets\CybershopWoocommerceCheckoutOrderTable());
 	}
 
 	// Register Widgets Categories

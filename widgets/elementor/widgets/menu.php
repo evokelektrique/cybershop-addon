@@ -55,7 +55,7 @@ class CybershopMenu extends Widget_Base {
 			[
 				'name' => 'navbar_link_typography',
 				'label' => __( 'تایپوگرافی آیتم ها', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .navbar-item.has-dropdown > .navbar-link',
 				'selector' => '{{WRAPPER}} .navbar-menu .navbar-item',
 			]
@@ -65,7 +65,7 @@ class CybershopMenu extends Widget_Base {
 			[
 				'name' => 'navbar_item_typography',
 				'label' => __( 'تایپوگرافی آیتم های منو کشویی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .navbar-dropdown a.navbar-item',
 			]
 		);
@@ -225,8 +225,8 @@ class CybershopMenu extends Widget_Base {
 				'label' => __( 'پس زمینه نوبار', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .navbar' => 'background-color: {{VALUE}};',
@@ -243,8 +243,8 @@ class CybershopMenu extends Widget_Base {
 				'label' => __( 'پس زمینه نوبار کشویی', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .navbar-dropdown' => 'background-color: {{VALUE}};',
@@ -260,8 +260,8 @@ class CybershopMenu extends Widget_Base {
 				'label' => __( 'برگر', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .navbar a.navbar-burger' => 'color: {{VALUE}};',
@@ -276,8 +276,8 @@ class CybershopMenu extends Widget_Base {
 				'label' => __( 'برگر(هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .navbar a.navbar-burger:hover' => 'color: {{VALUE}};',
@@ -292,8 +292,8 @@ class CybershopMenu extends Widget_Base {
 				'label' => __( 'پس زمینه برگر', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .navbar a.navbar-burger' => 'background-color: {{VALUE}};',
@@ -308,8 +308,8 @@ class CybershopMenu extends Widget_Base {
 				'label' => __( 'پس زمینه برگر (هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .navbar a.navbar-burger:hover' => 'background-color: {{VALUE}};',
@@ -324,8 +324,8 @@ class CybershopMenu extends Widget_Base {
 				'label' => __( 'متن آیتم ها', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .navbar a' => 'color: {{VALUE}};',
@@ -342,8 +342,8 @@ class CybershopMenu extends Widget_Base {
 				'label' => __( 'متن آیتم ها (هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .navbar a:hover' => 'color: {{VALUE}};',
@@ -358,8 +358,8 @@ class CybershopMenu extends Widget_Base {
 				'label' => __( 'پس زمینه آیتم ها (هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} a.navbar-item:focus' 		=> 'background-color: {{VALUE}};',

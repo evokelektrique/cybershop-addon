@@ -56,7 +56,7 @@ class CybershopArchivePosts extends Widget_Base {
 			[
 				'name' => 'post_title_typography',
 				'label' => __( 'تایپوگرافی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .post-title a',
 			]
 		);
@@ -68,8 +68,8 @@ class CybershopArchivePosts extends Widget_Base {
 				'label' => __( 'رنگ', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .post-title a' => 'color: {{VALUE}};',
@@ -105,7 +105,7 @@ class CybershopArchivePosts extends Widget_Base {
 			[
 				'name' => 'post_excerpt_typography',
 				'label' => __( 'تایپوگرافی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .post-excerpt',
 			]
 		);
@@ -117,8 +117,8 @@ class CybershopArchivePosts extends Widget_Base {
 				'label' => __( 'رنگ', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .post-excerpt' => 'color: {{VALUE}};',
@@ -248,7 +248,7 @@ class CybershopArchivePosts extends Widget_Base {
 			[
 				'name' => 'navigation_active_typography',
 				'label' => __( 'تایپوگرافی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .cybershop-pagination ul li .active',
 			]
 		);
@@ -259,8 +259,8 @@ class CybershopArchivePosts extends Widget_Base {
 				'label' => __( 'پس زمینه', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .cybershop-pagination ul li .active' => 'background-color: {{VALUE}};',
@@ -274,8 +274,8 @@ class CybershopArchivePosts extends Widget_Base {
 				'label' => __( 'رنگ', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .cybershop-pagination ul li .active' => 'color: {{VALUE}} !important;',
@@ -311,8 +311,8 @@ class CybershopArchivePosts extends Widget_Base {
 				'label' => __( 'پس زمینه (هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .cybershop-pagination ul li .page-number:not(.active):hover, .cybershop-pagination ul li .page-number:not(.active):active' => 'background-color: {{VALUE}};',
@@ -326,8 +326,8 @@ class CybershopArchivePosts extends Widget_Base {
 				'label' => __( 'رنگ (هاور)', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .cybershop-pagination ul li .page-number:not(.active):hover, .cybershop-pagination ul li .page-number:not(.active):active, {{WRAPPER}} .cybershop-pagination ul li.next a:hover, {{WRAPPER}} .cybershop-pagination ul li.prev a:hover' => 'color: {{VALUE}};',
@@ -339,7 +339,7 @@ class CybershopArchivePosts extends Widget_Base {
 			[
 				'name' => 'navigation_links_typography',
 				'label' => __( 'تایپوگرافی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .cybershop-pagination ul li .page-number:not(.active)',
 			]
 		);
@@ -350,8 +350,8 @@ class CybershopArchivePosts extends Widget_Base {
 				'label' => __( 'پس زمینه', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .cybershop-pagination ul li .page-number:not(.active)' => 'background-color: {{VALUE}};',
@@ -365,8 +365,8 @@ class CybershopArchivePosts extends Widget_Base {
 				'label' => __( 'رنگ', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .cybershop-pagination ul li .page-number, {{WRAPPER}} .cybershop-pagination ul li.next a, {{WRAPPER}} .cybershop-pagination ul li.prev a' => 'color: {{VALUE}};',
@@ -404,7 +404,7 @@ class CybershopArchivePosts extends Widget_Base {
 			[
 				'name' => 'post_details_typography',
 				'label' => __( 'تایپوگرافی', 'cybershop' ),
-				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'scheme' => \Elementor\Core\Schemes\Typography::TYPOGRAPHY_1,
 				'selector' => '{{WRAPPER}} .post-details',
 			]
 		);
@@ -416,8 +416,8 @@ class CybershopArchivePosts extends Widget_Base {
 				'label' => __( 'رنگ', 'cybershop' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'scheme' => [
-					'type' => \Elementor\Scheme_Color::get_type(),
-					'value' => \Elementor\Scheme_Color::COLOR_1,
+					'type' => \Elementor\Core\Schemes\Color::get_type(),
+					'value' => \Elementor\Core\Schemes\Color::COLOR_1,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .post-details' => 'color: {{VALUE}};',

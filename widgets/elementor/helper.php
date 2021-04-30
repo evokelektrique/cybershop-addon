@@ -53,22 +53,54 @@ class Helper {
 		return $branch;
 	}
 
-	public static function create_menu($item) {
-		$link = $item->url;
-		$title = $item->title;
-		$id = $item->ID;
-		//var_dump(carbon_get_nav_menu_item_meta($item->ID, 'cybershop_nav_icon'));
-		//exit;
+	public static function count_childrens($item, &$count) {
+		if(property_exists($item, 'child')) {
+			$count++;
+			$children = $item->child;
+			foreach($children as $child) {
+				self::count_childrens($child, $count);
+			}
+		}
+		return $count;
+	}
+
+	// Mega Menu 1 - (Desktop)
+	public static function create_mega_menu_1($item, $options = []) {
+		$link 	= $item->url;
+		$title 	= $item->title;
+		$id 	= $item->ID;
+
+		// Get CarbonFields Options
+		$link_color = carbon_get_nav_menu_item_meta($item->ID, 'cybershop_nav_color');
+		$link_icon 	= carbon_get_nav_menu_item_meta($item->ID, 'cybershop_nav_icon');
+		$link_image = carbon_get_nav_menu_item_meta($item->ID, 'cybershop_nav_image');
+		$icon_direction = !empty($options['icon_direction']) ? $options['icon_direction'] : null;
 
 		if(property_exists($item, 'child')) {
 			$children = $item->child;
 			?>
 			<li class="menu-has-children">
-				<a id="cybershop-mega-menu-item-<?= $id ?>" href="<?= $link ?>"><?= $title ?></a>
-				<ul class="">
+				<a 
+				style="color: <?= $link_color ?>;"
+				id="cybershop-mega-menu-item-<?= $id ?>" 
+				class="<?= $icon_direction ?>" 
+				href="<?= $link ?>"
+				>
+					<?php if(!empty($link_icon['class'])): ?>
+					<span class="icon">
+						<i class="<?= $link_icon['class'] ?> "></i>
+					</span>
+					<?php endif; ?>
+					<?= $title ?>
+				</a>
+
+				<ul 
+				class="" 
+				style="background-image: url(<?= $link_image ?>);"
+				>
 					<?php 
 					foreach($children as $child) {
-						self::create_menu($child);
+						self::create_mega_menu_1($child);
 					}
 					?>
 				</ul>
@@ -77,7 +109,81 @@ class Helper {
 		} else {
 			?>
 			<li>
-				<a id="cybershop-mega-menu-item-<?= $id ?>" href="<?= $link ?>"><?= $title ?></a>
+				<a 
+				style="color: <?= $link_color ?>;"
+				id="cybershop-mega-menu-item-<?= $id ?>" 
+				class="<?= $icon_direction ?>" 
+				href="<?= $link ?>"
+				>
+					<?php if(!empty($link_icon['class'])): ?>
+					<span class="icon">
+						<i class="<?= $link_icon['class'] ?> "></i>
+					</span>
+					<?php endif; ?>
+					<?= $title ?>
+				</a>
+			</li>
+			<?php
+		}
+	}
+
+	// Mobile Menu 1 - (Tablet/Mobile)
+	public static function create_mobile_menu_1($item, $options = []) {
+		$link 	= $item->url;
+		$title 	= $item->title;
+		$id 	= $item->ID;
+
+		// Get CarbonFields Options
+		$link_color = carbon_get_nav_menu_item_meta($item->ID, 'cybershop_nav_color');
+		$link_icon 	= carbon_get_nav_menu_item_meta($item->ID, 'cybershop_nav_icon');
+		$link_image = carbon_get_nav_menu_item_meta($item->ID, 'cybershop_nav_image');
+		$icon_direction = !empty($options['icon_direction']) ? $options['icon_direction'] : null;
+
+		if(property_exists($item, 'child')) {
+			$children = $item->child;
+			?>
+			<li class="nav-item nav-expand">
+				<a 
+				style="color: <?= $link_color ?>;"
+				onclick="event.preventDefault()" 
+				class="nav-link nav-expand-link"
+				href="<?= $link ?>"
+				>
+					<?php if(!empty($link_icon['class'])): ?>
+					<span class="icon">
+						<i class="<?= $link_icon['class'] ?> "></i>
+					</span>
+					<?php endif; ?>
+					<?= $title ?>
+				</a>
+
+				<ul 
+				class="nav-expand-content" 
+				style="background-image: url(<?= $link_image ?>);"
+				>
+					<?php 
+					foreach($children as $child) {
+						self::create_mobile_menu_1($child);
+					}
+					?>
+				</ul>
+			</li>
+			<?php
+		} else {
+			?>
+			<li class="nav-item">
+				<a 
+				style="color: <?= $link_color ?>;"
+				class="nav-link"
+				href="<?= $link ?>"
+				>
+					<?php if(!empty($link_icon['class'])): ?>
+					<span class="icon">
+						<i class="<?= $link_icon['class'] ?> "></i>
+					</span>
+					<?php endif; ?>
+					<?= $title ?>
+				</a>
 			</li>
 			<?php
 		}

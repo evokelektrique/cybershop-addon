@@ -10,16 +10,16 @@ use Elementor\Group_Control_Typography;
 
 if(!defined('ABSPATH')) exit; // No Direct Access
 
-class CybershopMegaMenu extends Widget_Base {
+class CybershopMegaMenu1 extends Widget_Base {
 
 	// Slug
 	public function get_name() {
-		return 'cybershop-mega-menu';
+		return 'cybershop-mega-menu-1';
 	}
 
 	// Title
 	public function get_title() {
-		return __('Mega Menu', 'cybershop');
+		return __('مگا منو 1', 'cybershop');
 	}
 
 	// Icon
@@ -105,6 +105,53 @@ class CybershopMegaMenu extends Widget_Base {
 			]
 		);
 
+		// Heading
+		$this->add_control(
+			'mm_second_menu_wrapper_background_settings',
+			[
+				'type' => Controls_Manager::HEADING,
+				'label' => __( 'تنظیمات منوی دوم', 'cybershop' ),
+				'separator' => 'before',
+			]
+		);
+		$this->add_control(
+			'mm_second_menu_wrapper_background_image_position',
+			[
+				'label' => __( 'جهت عکس پوسته منوی دوم', 'cybershop' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'center',
+				'options' => [
+					'top' 		=> __( 'بالا', 'cybershop' ),
+					'top right' => __( 'بالا راست', 'cybershop' ),
+					'top left' 	=> __( 'بالا چپ', 'cybershop' ),
+					'right' 	=> __( 'راست', 'cybershop' ),
+					'bottom' 	=> __( 'پایین', 'cybershop' ),
+					'bottom right' 	=> __( 'پایین راست', 'cybershop' ),
+					'bottom left' 	=> __( 'پایین چپ', 'cybershop' ),
+					'left' 		=> __( 'چپ', 'cybershop' ),
+					'center' 	=> __( 'وسط', 'cybershop' ),
+				],
+				'selectors' => [
+					'{{WRAPPER}} .cybershop-mega-menu .toggle:first-child > ul > li > ul' => 'background-position: {{VALUE}} !important',
+				],
+			]
+		);
+		$this->add_control(
+			'mm_second_menu_wrapper_background_image_size',
+			[
+				'label' => __( 'اندازه عکس پوسته', 'cybershop' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'cover',
+				'options' => [
+					'cover' => __( 'کاور', 'cybershop' ),
+					'contain' => __( 'شامل', 'cybershop' ),
+					'auto' => __( 'خودکار', 'cybershop' ),
+				],
+				'selectors' => [
+					'{{WRAPPER}} .cybershop-mega-menu .toggle:first-child > ul > li > ul' => 'background-size: {{VALUE}} !important',
+				],
+			]
+		);
 
 		$this->end_controls_section(); // END SETTINGS	
 
@@ -1390,7 +1437,7 @@ class CybershopMegaMenu extends Widget_Base {
 		?>
 
 
-		<div class="cybershop-mega-menu">
+		<div class="cybershop-mega-menu-1">
 			<ul>
 				<li class="toggle is-<?= $settings['mm_button_align'] ?>">
 					<button class="button is-light">
@@ -1409,7 +1456,7 @@ class CybershopMegaMenu extends Widget_Base {
 					<?php
 					if(!empty($selected_menu)) {
 						foreach( $menuitems as $item ) {
-							\Helper::create_menu($item);
+							\Helper::create_mega_menu_1($item);
 						}
 					}
 					?>

@@ -495,7 +495,7 @@ class CybershopProductAdditionalInformation extends Widget_Base {
 		$this->add_responsive_control(
 			'additional_information_transition_duration',
 			[
-				'label' => __( 'شعاع حاشیه', 'cybershop' ),
+				'label' => __( 'مدت زمان تغییر', 'cybershop' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 0.2,

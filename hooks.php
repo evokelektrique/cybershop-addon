@@ -36,6 +36,10 @@ add_action( 'init', function() {
 	
 	// Change Order By Texts
 	// add_filter('woocommerce_catalog_orderby', 'cybershop_custom_ordering_texts');
+
+    // Add Wishlist Endpoint To Woocommerce MyAccount Page
+    add_rewrite_endpoint( 'wishlist', EP_ROOT | EP_PAGES );
+
 });
 
 add_action( 'after_setup_theme', function() {
@@ -64,3 +68,22 @@ add_action( 'admin_enqueue_scripts', function() {
     wp_register_style( 'admin_css', get_template_directory_uri() . '/public/css/admin.css', false, '1.0.0' );
     wp_enqueue_style('admin_css');
 });
+
+
+
+
+// Custom Wishlist
+add_filter( 'woocommerce_account_menu_items', function($items) {
+    unset($items['wishlist']);
+    $items['wishlist'] = __('علاقه مندی ها', 'cybershop');
+
+    return $items;
+}, 99, 1 );
+
+add_action( 'woocommerce_account_wishlist_endpoint', function() {
+    echo do_shortcode( '[cybershop_wishlist]' );
+});
+
+// add_action( 'woocommerce_account_lost_password_endpoint', function() {
+//     echo 'test';
+// });
